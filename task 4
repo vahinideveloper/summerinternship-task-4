@@ -1,0 +1,20 @@
+import numpy as np
+import cv2
+first = cv2.imread('vah.png')
+first.shape
+second = cv2.imread('vah 2.png')
+second.shape
+cv2.imshow('first',first)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cv2.imshow('second',second)
+cv2.waitKey()
+cv2.destroyAllWindows()
+first = cv2.resize(first,(299,168))
+first.shape
+second = cv2.resize(second,(299,168))
+second.shape
+hori = np.hstack((first,second))
+cv2.imshow("HORIZONTAL COLLAGE",hori)
+cv2.waitKey()
+cv2.destroyAllWindows()
